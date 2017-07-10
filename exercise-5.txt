@@ -1,0 +1,24 @@
+mysql> USE decodemtl_addressbook;
+Database changed
+
+//Create table Account for database decodemtl_addressbook
+
+mysql> CREATE TABLE Account (id INT, email VARCHAR(255), password VARCHAR(40), createdON DATETIME, modifiedON DATETIME);                                                                         
+Query OK, 0 rows affected (0.05 sec)
+
+
+//Create table AddressBook for database decodemtl_addressbook
+
+mysql> CREATE TABLE AddressBook (id INT, accountId INT, name VARCHAR(255), createdON DATETIME, modifiedON DATETIME);
+Query OK, 0 rows affected (0.01 sec)
+
+
+//Create table Entry for database decodemtl_addressbook
+
+mysql> CREATE TABLE Entry (id INT, adressBookId INT, firstName VARCHAR(255), lastNAme VARCHAR(255), birthday DATETIME, type ENUM('home', 'work', 'other'), subtype ENUM('phone', 'address', 'email'), contentLineOne VARCHAR(255), contentLineTwo VARCHAR(255), contentLineThree VARCHAR(255), contentLineFour VARCHAR(255), contentLineFive VARCHAR(255));                                       
+Query OK, 0 rows affected (0.01 sec)
+
+//Create table Test for database decodemtl_addressbook
+
+mysql> CREATE TABLE Test (test VARCHAR(255));
+Query OK, 0 rows affected (0.01 sec)
